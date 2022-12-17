@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{%load static%}
+
+{% block stylesheets %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'users/users.css' %}"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <br>
+
+
+    <div class="profile-page">
+
+
+        <div id="profile">
+            <h4>Author:</h4><p>{{user.username}}</p>
+            <h4>Email Address:</h4><p>{{ user.email }}</p>
+            <h4>Date Joined:</h4><p>{{user.date_joined }}</p>
+    
+        </div>
+        
+        <div class="wrapper">
+
+                <ul>
+                    {%if user.newsstory_set.all%}
+                        {% for story in user.newsstory_set.all %}
+                            {%comment%} {{story.title}} {%endcomment%}
+                            {% include "news/storyCard.html" with story=story%}
+                        {% endfor %}
+                    {%else%}
+                        <p>No stories are available</p>
+                    {%endif%}
+                </ul>
+        </div>
+    </div>
+{% endblock %}
+    
+       

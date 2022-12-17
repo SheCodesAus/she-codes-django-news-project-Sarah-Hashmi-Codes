@@ -1,34 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
 
+
 body {
-    background-color: rgb(240, 239, 239);
+    background-color: white;
+    margin:0px;
+
 }
+
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
-}
+    border-bottom: 1px solid black;
+    background-color: black;
 
-img {
-    filter: grayscale(100%);
 }
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   font-family: 'Poppins', sans-serif; 
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 20px;
     margin: 0;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    color: black;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 #header-text {
@@ -37,18 +48,36 @@ h3 {
 }
 
 nav {
-    flex-basis: 20%;
+    flex-basis: 15%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
 }
 
 a {
     margin: 2px;
     text-decoration: none;
-    color: #000;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+
 }
 
 a, p {
-    font-family: monospace;
+    font-family:'Poppins',sans-serif;
+}
+
+footer{
+    text-align:center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#logo{
+    height:60px;
+    width: 50px;
+    display:flex;
+
 }
